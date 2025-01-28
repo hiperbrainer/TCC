@@ -100,6 +100,7 @@ def create_and_train_model_LSTM(X_train, y_train, look_back, epochs=100, batch_s
         callbacks=[early_stopping], 
         verbose=0  # Set verbose to 0 to not display epochs
     )
+    
     return model, history
 
 

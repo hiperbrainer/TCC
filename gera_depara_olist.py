@@ -93,3 +93,25 @@ cnn_df_olist_tempo.to_csv(r'C:\Users\BRAINER.CAMPOS\Desktop\TCC\Resultados\Tempo
 lsmt_df_olist_tempo.to_csv(r'C:\Users\BRAINER.CAMPOS\Desktop\TCC\Resultados\Tempo\Olist\Loja\LSMT.csv', index=False)
 prophet_df_olist_tempo.to_csv(r'C:\Users\BRAINER.CAMPOS\Desktop\TCC\Resultados\Tempo\Olist\Loja\prophet.csv', index=False)
 rl_df_olist_tempo.to_csv(r'C:\Users\BRAINER.CAMPOS\Desktop\TCC\Resultados\Tempo\Olist\Loja\RL.csv', index=False)
+
+
+import pandas as pd
+
+df = pd.read_excel('Resultados\Resultados_Finais.xlsx')
+
+df.sort_values(by=['MAPE(%)']).head(100).value_counts('Modelo')
+
+df.sort_values(by=['MAPE(%)']).head(100).groupby('Modelo')[['MAPE(%)']].mean()
+
+df.groupby('Modelo')[['RMSE(#)']].mean()
+
+df.groupby(['Base','Modelo'])[['RMSE(#)']].mean().round(0)
+
+pd.DataFrame(df.sort_values(by=['MAPE(%)']).head(100).value_counts('Modelo'))
+
+df.round(2).to_latex(index=False)
+
+df_apendice = df.applymap(lambda x: f"{x:.2e}" if isinstance(x, (int, float)) and abs(x) > 1e6 else round(x, 2) if isinstance(x, (int, float)) else x).rename(columns = {'RMSE(#)':'RMSE', 'MAPE(%)':'MAPE'})
+df_apendice
+
+
