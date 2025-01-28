@@ -2,6 +2,8 @@
 
 Este repositório apresenta o desenvolvimento do Trabalho de Conclusão de Curso (TCC), cujo objetivo é explorar e aplicar modelos quantitativos para a previsão de demanda. O estudo foca em quatro técnicas estatísticas e de aprendizado de máquina amplamente utilizadas em previsão de séries temporais.
 
+OBS.: Todas as visualizações estão na página `Gráficos` e podem ser visualizadas de forma interativa (.html).
+
 ## Resumo
 O projeto aborda a previsão de demanda como uma ferramenta essencial para a tomada de decisões em ambientes empresariais, especialmente no varejo. Modelos como ARIMA, Prophet, Long Short-Term Memory (LSTM) e Redes Neurais Convolucionais (CNN) são explorados, implementados e comparados quanto à sua eficiência e precisão na previsão de vendas com base em dados históricos.
 
@@ -12,6 +14,13 @@ O repositório está organizado da seguinte forma:
 - **`Bases Tratadas/`**: Contém os conjuntos de dados utilizados para treinamentos e testes.
 - **`Artigos/`**: Documentação e arquivos relacionados ao TCC.
 - **`Resultados/`**: Relatórios e resultados gerados pelas implementações dos modelos.
+
+- OBS. - O github não aceita arquivos muitos grandes. Então, baixe as bases nos seguintes links e as coloque em pastas chamadas (Olist, M5 e Favorita):
+     - 'Olist' : https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+     - 'M5' : https://www.kaggle.com/competitions/m5-forecasting-accuracy
+     - 'Favorita' : https://www.kaggle.com/competitions/favorita-grocery-sales-forecasting
+
+Se houver dúvidas confira os arquivos lidos no notebook `EDA.ipynb`
 
 ## Modelos Abordados
 
@@ -42,9 +51,9 @@ O repositório está organizado da seguinte forma:
    ```
 3. Execute os notebooks para reproduzir os resultados na seguinte ordem
 
-    1. Todos os modelos
-    2. gera_depara_olist
-    3. Analise_resultados
+    1. EDA.ipynb  
+    2. Todos os modelos
+    3. Analise_resultados.ipynb
 
 ## Contribuições
 
